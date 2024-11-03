@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "declaration": true,
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "lib",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+        "@config": ["cdk/configs"],
+        "@helpers": ["cdk/core/helpers"],
+        "@type": ["cdk/core/types"],
+        "@libs/*": ["cdk/lib/*"],
+        "@libs": ["cdk/lib/index.ts"],
+    },
+  },
+  "ts-node": {
+      "require": ["tsconfig-paths/register"]
+  },
+  "require": [
+      "ts-node/register/transpile-only"
+  ],
+  "exclude": [
+    "node_modules",
+    "cdk.out"
+  ],
+  
+}
