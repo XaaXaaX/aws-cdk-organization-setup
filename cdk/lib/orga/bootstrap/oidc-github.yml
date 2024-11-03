@@ -1,0 +1,30 @@
+Parameters:
+  Owner:
+    Type: String
+    Description: The owner of the repository
+  Repo:
+    Type: String
+    Description: The name of the repository
+    Default: '*'
+Resources:
+  GitHubOIDCIamProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      ClientIdList: ['sts.amazonaws.com']
+      Url: 'https://token.actions.githubusercontent.com'
+  GitHubOIDCRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: 'github-actions-deployment-role'
+      AssumeRolePolicyDocument:
+        Statement: 
+          - Action: ['sts:AssumeRoleWithWebIdentity']
+            Effect: Allow
+            Principal:
+              Federated: !GetAtt GitHubOIDCIamProvider.Arn
+            Condition:
+              StringLike:
+                token.actions.githubusercontent.com:sub: !Sub 'repo:${Owner}/${Repo}'
+                token.actions.githubusercontent.com:aud: 'sts.amazonaws.com'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
