@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudformation": "^3.699.0",
-    "aws-cdk-lib": "^2.171.0",
+    "aws-cdk-lib": "^2.171.1",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   }
