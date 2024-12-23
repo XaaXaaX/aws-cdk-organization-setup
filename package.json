@@ -27,8 +27,8 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudformation": "^3.712.0",
-    "aws-cdk-lib": "^2.173.1",
+    "@aws-sdk/client-cloudformation": "^3.716.0",
+    "aws-cdk-lib": "^2.173.2",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   }
