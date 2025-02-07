@@ -19,6 +19,9 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -40,3 +43,6 @@ updates:
         ]
     schedule:
       interval: "monthly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
