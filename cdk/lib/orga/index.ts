@@ -8,7 +8,7 @@ import { Bootstrap, BootstrapTypes } from './bootstrap';
 import { TrustedServiceAccessStack } from './trusted-service-access-stack';
 import { CfnResourceShare } from 'aws-cdk-lib/aws-ram';
 import { OrganizationPoliciesStack } from './policies-stack';
-import { PolicyTypeActicationStack } from './policy-type-actication-stack';
+import { PolicyTypeActicationStack } from './policy-type-activation-stack';
 
 export type OrganizationStackProps = EnforcedStackProps & {
   orgConfig: OrgConfg;

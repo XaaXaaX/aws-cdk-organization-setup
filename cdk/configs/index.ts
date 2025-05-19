@@ -15,7 +15,8 @@ const defaultConfig: Config = {
   // dns: { isExternal: false, domainName: 'example.com', mailExchangeDomainName: 'mail.example.com' },
   dns: { 
     isExternal: true,
-    hostedZoneId: '<HOSTED_ZONE_ID>',
+    hostedZoneId: '<HOSTED_ZONE_ID>', // Replace with actual hosted zone ID if external
+    domainName: '<DOMAIN_NAME>', // Replace with actual domain name if external
     mailExchangeDomainName: 'mail.example.com',
   },
   github: {
@@ -27,13 +28,11 @@ const defaultConfig: Config = {
       accounts: [ { accountName: 'development' } ],
     },
     trustedAWSServices: [ 
-      trustedAWSServices: [ 
         'sso.amazonaws.com',
         'servicequotas.amazonaws.com',
         'tagpolicies.tag.amazonaws.com',
         'stacksets.cloudformation.amazonaws.com',
         'account.amazonaws.com',
-      ],
     ],
     crossAccountParametersSharing: false,
   },

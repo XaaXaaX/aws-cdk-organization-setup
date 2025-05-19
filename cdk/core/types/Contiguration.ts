@@ -11,7 +11,7 @@ export type SSOReady = {
 }
 export type SSOConfig = SSONotReady | SSOReady;
 
-type ExternalZone = { isExternal: true; hostedZoneId: string; }
+type ExternalZone = { isExternal: true; hostedZoneId: string; domainName: string; }
 
 type InternalZone = { isExternal: false; domainName: string; }
 

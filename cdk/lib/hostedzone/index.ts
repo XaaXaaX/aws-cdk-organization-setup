@@ -14,7 +14,10 @@ export class HostedZoneStack extends EnforcedStack {
 
     let hostedZone: IHostedZone;
     if(dnsConfig.isExternal)
-      hostedZone = HostedZone.fromHostedZoneId(this, 'HostedZone', dnsConfig.hostedZoneId);
+      hostedZone = HostedZone.fromHostedZoneAttributes(this, 'HostedZone', {
+        hostedZoneId: dnsConfig.hostedZoneId,
+        zoneName: dnsConfig.domainName,
+      });
     else {
       hostedZone = new HostedZone(this, 'HostedZone', { zoneName: dnsConfig.domainName, comment: 'Managed by CDK' });
       
