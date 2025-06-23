@@ -14,13 +14,13 @@
     "cdk:sso": "npm run cdk:sso:run -- -c env=dev"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.149",
+    "@types/aws-lambda": "^8.10.150",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.15.32",
-    "aws-cdk": "^2.1018.1",
-    "aws-cdk-lib": "^2.201.0",
+    "aws-cdk": "^2.1019.1",
+    "aws-cdk-lib": "^2.202.0",
     "constructs": "^10.4.2",
-    "cdk-nag": "^2.36.18",
+    "cdk-nag": "^2.36.23",
     "esbuild": "^0.25.5",
     "jest": "^29.7.0",
     "ts-jest": "^29.4.0",
