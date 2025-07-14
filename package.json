@@ -29,7 +29,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudformation": "^3.840.0",
+    "@aws-sdk/client-cloudformation": "^3.844.0",
     "source-map-support": "^0.5.21"
   }
 }
